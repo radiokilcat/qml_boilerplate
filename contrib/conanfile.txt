@@ -1,0 +1,31 @@
+[requires]
+qt/5.12.10@alex_profile/stable
+
+
+[options]
+qt:enable_qtbase=True
+qt:enable_qtdeclarative=True
+qt:enable_qtgraphicaleffects=True
+qt:enable_qtimageformats=True
+qt:enable_qtquickcontrols=True
+qt:enable_qtquickcontrols2=True
+qt:enable_qtsvg=True
+qt:enable_qttools=True
+qt:enable_qttranslations=True
+qt:enable_qtwinextras=True
+qt:enable_qtx11extras=True
+qt:enable_qtwebsockets=True
+
+[imports]
+bin, *.dll -> ./lib
+lib, *.dll -> ./lib
+lib, *.so -> ./lib
+lib, *.so.* -> ./lib
+qml, * -> ./qml
+plugins, * -> ./plugins
+bin, *.pdb -> ./pdb
+bin, gst* -> ./bin
+libexec, * -> ./bin
+
+[generators]
+cmake
